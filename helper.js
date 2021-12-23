@@ -1,7 +1,22 @@
+/**
+ * 
+ * @description include required packages
+ * @global true
+ * @package fs
+ * @package path
+ * @package form-data
+ */
 const fs = require('fs'),
     path = require('path'),
     FormData = require('form-data')
 
+/**
+ * 
+ * @function file_exists
+ * @description Checks if a file exists
+ * @param { file_path: MANDATORY }
+ * @returns Object { exists, size }
+ */
 const file_exists = file_path => {
     let exists = false,
         size = 0
@@ -18,6 +33,13 @@ const file_exists = file_path => {
     return { exists, size }
 }
 
+/**
+ * 
+ * @function attach_files
+ * @description Attaches files to POST form
+ * @param { file_list: MANDATORY }
+ * @returns form
+ */
 const attach_files = file_list => {
     const form = new FormData()
 
@@ -26,4 +48,9 @@ const attach_files = file_list => {
     return form
 }
 
+/**
+ * 
+ * @exports file_exists
+ * @exports attach_files
+ */
 module.exports = { file_exists, attach_files }

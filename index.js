@@ -5,7 +5,7 @@
  * @author Techamica <is@woano.com>
  * @copyright 2021 Techamica
  * @license MIT
- * @version 1.0.4
+ * @version 1.0.5
  * @link https://github.com/techamica/smtpserver-node
  */
 
@@ -370,7 +370,7 @@ class SmtpApiMailer {
         /* E N D: check if a valid Text/HTML was provided */
 
         if(this.#total_size>max_upload_size)
-            throw new Error(`Maximum file-size of ${ max_upload_size } Bytes exceeded`)
+            throw new Error(`Maximum upload size of ${ max_upload_size } Bytes exceeded`)
 
         return this
     }

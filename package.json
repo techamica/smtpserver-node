@@ -1,6 +1,6 @@
 {
   "name": "@techamica/smtpserver-node",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "API vendor in Node.js for https://smtpserver.com",
   "main": "index.js",
   "scripts": {
