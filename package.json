@@ -1,0 +1,28 @@
+{
+  "name": "@techamica/smtpserver-node",
+  "version": "1.0.4",
+  "description": "API vendor in Node.js for https://smtpserver.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techamica/smtpserver-node.git"
+  },
+  "keywords": [
+    "smtpserver"
+  ],
+  "author": "Techamica <is@woano.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techamica/smtpserver-node/issues"
+  },
+  "homepage": "https://github.com/techamica/smtpserver-node#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "email-validator": "^2.0.4",
+    "form-data": "^4.0.0",
+    "request": "^2.88.2"
+  }
+}
