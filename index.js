@@ -5,7 +5,7 @@
  * @author Techamica <is@woano.com>
  * @copyright 2021 Techamica
  * @license MIT
- * @version 1.0.5
+ * @version 1.0.6
  * @link https://github.com/techamica/smtpserver-node
  */
 
