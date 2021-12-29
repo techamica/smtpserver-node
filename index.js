@@ -5,7 +5,7 @@
  * @author Techamica <is@woano.com>
  * @copyright 2021 Techamica
  * @license MIT
- * @version 1.1.0
+ * @version 1.1.2
  * @link https://github.com/techamica/smtpserver-node
  */
 
@@ -407,7 +407,7 @@ class SmtpApiMailer {
                 })
 
                 // resolve(Object.getOwnPropertyNames(response))
-                resolve(response.data)
+                resolve({ code: response.status, headers: response.headers, ...response.data })
             }
             catch(e) {
                 reject(e)
@@ -415,9 +415,9 @@ class SmtpApiMailer {
         })
         .catch(err => {
             if(Object.getOwnPropertyNames(err).includes('toJSON'))
-                return { success: 0, message: err.toJSON().message }
+                return { code: err.response.status, headers: err.response.headers, ...err.response.data }
             else
-                return { success: 0, message: err }
+                return { code: 500, headers: {}, success: 0, message: err }
         })
     }
 
